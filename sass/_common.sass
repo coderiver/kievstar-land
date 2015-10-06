@@ -53,5 +53,1063 @@ body
 	font-size: 12px
 	line-height: 1.4
 
+*
+	+box
 
-// common blocks
+body
+	font-family: Arial, sans-serif 
+	font-size: 12px 
+	line-height: 1.4
+// fonts
+
++font("HelveticaNeue Bold", helveticaneuecyr-bold)
++font("HelveticaNeue Medium", helveticaneuecyr-medium)
++font("HelveticaNeue Roman", helveticaneuecyr-roman-webfont)
++font("HelveticaNeue Light", helveticaneuecyr-light)
++font("MuseoSansCyrl", museosanscyrl)
+
+
+//vars
+
+=bold
+	font-family: "HelveticaNeue Bold", Helvetica, sans-serif 
+=med
+	font-family: "HelveticaNeue Medium", Helvetica, sans-serif 
+=reg
+	font-family: "HelveticaNeue Roman", Helvetica, sans-serif 
+=light
+	font-family: "HelveticaNeue Light", Helvetica, sans-serif 
+=museo
+	font-family: "MuseoSansCyrl", Helvetica, sans-serif
+
+
+
+//reset
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal
+	line-height: 1.2
+a
+	text-decoration: none
+
+
+h4
+	color: #333333
+	+reg
+	font-size: 18px 
+h5
+	+reg
+	font-size: 20px
+	color: #333333 
+h6
+	+bold
+	font-size: 13px
+	color: #424e55 
+
+.title 
+	color: #333
+	+museo
+	font-size: 30px
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 45px
+	+r(800)
+		font-size: 26px	
+	+r(550)
+		font-size: 23px	
+
+
+.btn-menu
+	width: 30px
+	height: 30px
+	background: #0eb0ea
+	+border-radius(2px)
+	position: relative
+	&:active
+		top: 1px
+	span
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+		padding: 3px 0
+		display: block
+		width: 80% 
+		margin: 0 auto
+		&:before
+			content: "" 
+			width: 100%
+			height: 2px
+			background: #fff
+			display: block 
+	
+.btn
+	+reg
+	font-size: 12px
+	color: #fff
+	background: #0eb0ea
+	+border-radius(2px)   
+	display: inline-block
+	vertical-align: top
+	line-height: 1
+	padding: 9px 14px 
+	+box
+	position: relative
+	text-align: center
+	&:active
+		top: 1px
+	&_black
+		background: #434e55 
+	&_big
+		padding: 12px 20px
+		letter-spacing: 0.025em 
+	&_green
+		background: #88f238
+		color: #434e55  
+	&_green-white
+		background: #4db21d
+		color: #fff 
+	&_large
+		width: 160px
+		padding: 9px   
+.select
+	position: relative
+	cursor: pointer
+	color: #333333
+	+reg
+	font-size: 12px
+	text-align: left
+	select
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+	&.is-active
+		.select__text
+			+border-radius(2px 2px 0 0)
+.select__text
+	position: relative
+	display: block
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	background-color: #fff
+	padding: 6px 27px 6px 10px
+	+box 
+	border: 1px solid #d7d7d7
+	+border-radius(2px)
+	height: 30px
+	z-index: 2 
+	&:after
+		content: ""
+		position: absolute
+		right: 9px
+		top: 50%
+		margin-top: -2px
+		+arr(8, 4, #999999, b)
+.select__list
+	position: absolute
+	display: none
+	left: 0
+	right: 0
+	top: 100%
+	z-index: 200
+	max-height: 200px 
+	overflow: auto
+	border: 1px solid #d7d7d7
+	border-top: none
+	+border-radius(0 0 2px 2px)
+	background: #fff 
+	li
+		padding: 6px 10px 6px 10px
+		cursor: pointer
+		
+.input, .textarea
+	background-color: #fff
+	padding: 7px 27px 7px 10px
+	+box 
+	border: 1px solid #d7d7d7
+	+border-radius(2px)
+	width: 100%
+	color: #333333
+	+reg
+	font-size: 12px
+	+placeholder-color(#999999)
+	&.error
+		border-color: #f44336
+.textarea
+	height: 110px
+	resize: none
+
+.label
+	+bold
+	font-size: 12px
+	color: #333333 
+	a
+		color: #0096db
+		display: block 
+.checkbox
+	display: inline-block
+	vertical-align: top
+	position: relative
+	+reg
+	font-size: 12px
+	color: #333 
+	padding: 2px 0 2px 30px 
+	cursor: pointer
+	+user-select(none)
+	input
+		visibility: hidden
+		+opacity(0)
+		position: absolute
+		top: 0
+		left: 0
+		&:checked + span
+			&:after
+				top: 5px
+				visibility: visible
+				+opacity(1)
+	span
+		&:before, &:after
+			content: "" 
+			position: absolute
+		&:before
+			border: 1px solid #d7d7d7
+			+border-radius(2px)
+			width: 20px
+			height: 20px
+			+box
+			background: #fff
+			top: 0
+			left: 0
+		&:after
+			top: 2px
+			left: 5px
+			+s(checkbox)
+			visibility: hidden
+			+opacity(0)
+			+transition(all 0.3s)
+			
+.reset
+	+reg
+	font-size: 12px
+	color: #333 	
+	padding: 8px 0
+	cursor: pointer
+	background: none
+
+//HEADER
+.out
+	min-width: 320px
+
+.inner
+	max-width: 940px
+	padding: 0 20px
+	margin: 0 auto
+	+clr
+	position: relative
+	+r(900)
+		padding: 0 12px 
+.header
+	border-bottom: 1px solid #eeeeee
+	position: relative
+	&__menu
+		padding: 0 60px 0 232px 
+		+clr
+		font-size: 0
+		+r(900)
+			position: absolute
+			top: 100%
+			right: 71px
+			background: #fff 
+			padding: 10px 12px
+			margin: 1px 0 0  
+			text-align: right
+			border: 1px solid #eeeeee
+			border-top: none
+			+border-radius(0 0 4px 4px)
+			max-height: 0
+			+transition(max-height 0.4s, opacity 0.1s, visibility 0.1s)
+			+opacity(0)
+			visibility: hidden
+			overflow: hidden
+			z-index: 200 
+		+r(400)
+			right: 0
+		&.is-active
+			+r(900)
+				max-height: 200px 
+				+opacity(1)
+				visibility: visible
+		li
+			+r(900)
+				margin-bottom: 5px
+			a
+				+reg
+				font-size: 12px
+				color: #0eb0ea
+				&:hover
+					text-decoration: underline
+	&__list
+		padding: 31px 0 0
+		float: right
+		+r(900)
+			float: none
+			padding: 0
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 10px 0 12px
+			position: relative
+			+r(900)
+				display: block
+				padding: 0
+			&:before
+				content: "" 
+				position: absolute
+				top: 50%
+				left: 0
+				margin-top: -2px
+				width: 4px
+				height: 4px
+				+border-radius(50%)
+				background-color: #0EB0EA
+				+r(900)
+					display: none
+			&:first-child
+				&:before
+					display: none
+	.btn
+		float: right
+		width: 80px
+		margin: 25px 20px 0 7px
+		+r(900)
+			float: none
+			margin: 5px 0 10px
+	.btn-menu
+		float: right
+		margin: 25px 20px 0 0
+		display: none
+		+r(900)
+			display: block
+		+r(400)
+			margin: 25px 0 0
+			position: absolute
+			top: 0
+			right: 0
+.logo
+	float: left
+	margin: 16px 40px 10px 0 
+	font-size: 0 
+.nav
+	float: left
+	padding: 31px 0 0
+	+r(900)
+		float: none
+		padding: 0
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 8px
+		+r(900)
+			display: block
+			padding: 0
+
+.lang
+	float: right
+	border-left: 1px solid #eeeeee
+	height: 79px
+	padding: 33px 0 10px 9px
+	+box
+	+r(400)
+		float: none
+		clear: both
+		border: none
+		height: auto
+		padding: 10px 0 10px
+	&__inner
+		position: relative
+		padding: 0 15px 0 0 
+		width: 35px
+		&:after
+			content: "" 
+			position: absolute
+			top: 6px
+			right: 0
+			+s(arr-bot)
+		&:hover
+			.lang__drop
+				display: block
+	&__link
+		+med
+		font-size: 10px
+		letter-spacing: 0.025em 
+		color: #0eb0ea 
+		text-transform: uppercase
+	&__drop
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		display: none		
+		z-index: 10
+		margin: 0 -5px
+		padding: 0 5px
+		background: #fff 
+		+r(400)
+			padding: 5px  
+
+
+.inner_market
+	max-width: 1350px
+	width: 100%
+	margin: 0 auto
+	+r(1370)
+		width: 96%
+		margin: 0 auto
+	
+.header_market
+	border: none
+	.header__top
+		+clr
+	.header__tabs
+		float: left
+		+clr
+		li
+			float: left
+			a
+				display: block
+				width: 135px
+				padding: 8px 
+				background: #FFF 
+				text-align: center
+				font-size: 12px
+				color: #5e9efc
+				+museo
+				&.is-active
+					background: #239FFF 
+					color: #FFF
+	.header__tools
+		float: right
+		padding: 8px 0
+		+clr
+		li
+			float: left
+			padding-left: 5px
+			&:after
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				margin-left: 5px
+				+s(dot)
+			&:last-child
+				&:after
+					display: none
+			a
+				color: #363636
+				+museo
+				&:hover
+					text-decoration: underline
+		.lang
+			float: none
+			height: auto
+			padding: 0
+			border: none
+			a
+				padding-right: 15px
+				text-transform: none
+				font-size: 12px
+				color: #333
+				+museo
+	.header__blue-menu
+		padding: 10px
+		background: #239FFF 
+		+justify
+	.logo
+		float: none
+		margin: 0
+		&.logo_l
+			display: inline-block
+			vertical-align: top
+		&.logo_s
+			display: none
+	.header__search
+		display: inline-block
+		vertical-align: top
+		width: percentage(640/1350)
+		label
+			position: relative
+			display: block
+			width: 100% 
+			height: 40px
+			input
+				width: 100%
+				height: 40px
+				background: transparent
+				border-bottom: 1px solid #FFF 
+				color: #FFF  
+			span
+				display: block
+				position: absolute
+				top: 30%
+				right: 10px
+				+s(search)
+	.header__sell
+		display: inline-block
+		vertical-align: top
+		padding-top: 3px
+		font-size: 0
+		.sell
+			display: inline-block
+			vertical-align: top
+			padding-left: 30px
+			margin-left: 20px
+			border-left: 1px solid rgba(255, 255, 255, 0.1) 
+			&:first-child
+				border: none
+				padding: 0
+				margin: 0
+			.sell__icon
+				display: inline-block
+				vertical-align: middle
+				margin-right: 20px
+			.sell__text
+				display: inline-block
+				vertical-align: middle
+				a
+					display: block
+					font-size: 14px
+					line-height: 1.4
+					color: #FFF
+					+museo
+				p
+					display: block
+					opacity: 0.7
+					font-size: 12px
+					font-weight: 300 
+					line-height: 1.4
+					color: #FFF 
+	.header__nav
+		margin: 20px 0 10px
+		border-top: 1px solid #dfdfdf 
+		border-bottom: 1px solid #dfdfdf 
+		background: #FCFCFD
+		text-align: center 
+		> ul
+			position: relative
+			font-size: 0
+			z-index: 99999
+			> li
+				display: inline-block
+				vertical-align: middle
+				> a
+					display: block
+					padding: 10px 20px
+					font-size: 15px
+					color: #333
+					+museo
+					&:hover
+						margin: 0 -1px
+						border-left: 1px solid #e0e0e0 
+						border-right: 1px solid #e0e0e0
+						border-bottom: none 
+						background: #FFFEFE 
+						color: #5e9efc
+				&:hover
+					.header__drop
+						display: block	
+	.header__drop
+		display: none
+		position: absolute
+		top: 41px
+		left: 0
+		right: 0
+		width: 100%
+		height: 225px
+		padding: 30px 75px
+		border: 1px solid #e0e0e0
+		background: #FFF 
+		z-index: 99	
+		text-align: left
+		+clr
+		.drop-wrap
+			overflow: hidden
+			font-size: 0
+			h4
+				display: block
+				width: 45%
+				padding-bottom: 10px
+				border-bottom: 1px solid #DFDFDF
+				margin-bottom: 20px 
+				text-transform: uppercase
+				font-size: 12px
+				font-weight: 700 
+				color: #333
+				+museo
+			ul
+				display: inline-block
+				vertical-align: top
+				width: 25%
+				padding-right: 10px
+				li
+					display: block
+					margin-bottom: 10px
+					a
+						font-size: 12px
+						color: #363636
+						+museo
+						&:hover
+							text-decoration: underline
+							color: #5e9efc
+			&.top
+				float: left
+				width: 20%
+				margin-right: 25px	
+				h4
+					width: 100% 
+				ul
+					width: 100% 
+	+r(1280)
+		.header__nav
+			> ul > li > a
+				padding: 10px 15px
+	+r(1180)
+		.header__sell
+			.sell
+				padding-left: 10px
+				margin-left: 10px
+		.header__nav
+			ul li a
+				padding: 10px 10px
+	+r(1080)
+		.header__nav
+			ul li a
+				padding: 10px 5px
+	+r(1023)
+		.header__search
+			width: 30%
+	+r(990)
+		.header__nav
+			margin: 0 0 10px 0
+			background: transparent
+			border: none 
+			ul
+				display: none
+				text-align: left
+				border: 1px solid #EEE 
+				li
+					display: block
+					a
+						padding: 10px
+				&.is-open
+					display: block
+	+r(710)
+		.header__tabs li a
+			text-align: left
+			font-size: 16px
+		.header__tools
+			display: none
+		.header__blue-menu
+			text-align: left
+			+clr
+			&.is-search
+				position: relative
+				height: 120px
+			&.is-tools
+				position: relative
+		.header__search
+			display: none
+			&.is-active
+				display: block
+				position: absolute
+				top: 60px
+				left: 10px
+				right: 10px
+				width: auto
+		.header__sell
+			display: none
+	+r(680)
+		.logo_l
+			display: none
+		.logo_s
+			display: inline-block
+		.header__nav
+			display: none	
+
+.logo_s
+	display: none
+	+r(680)
+		display: inline-block
+				
+.btn-nav
+	display: none
+	position: relative
+	width: 200px
+	height: 40px
+	padding: 10px 50px 10px 10px
+	margin-top: 10px
+	border: 1px solid #EEE
+	text-align: left
+	font-size: 12px
+	color: #333
+	+reg
+	+clr
+	span
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 39px
+		height: 38px
+		border-left: 1px solid #EEE 
+		+vertical
+		&:after
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			+arr(6, 3, #333, b)
+	&.is-active
+		border-bottom: none
+		span:after
+			+arr(6, 3, #333, t)
+	+r(990)
+		display: block
+		
+.search-mob
+	display: none
+	float: right
+	margin: 10px 35px 0 0
+	+s(search-btn)
+	+r(710)
+		display: block
+		
+.menu-mob
+	display: none
+	float: right
+	padding: 22px 0
+	span
+		display: block
+		position: relative
+		width: 30px
+		height: 3px
+		background: #FFF
+		-webkit-transition-duration: 0s
+		transition-duration: 0s
+		-webkit-transition-delay: 0.2s
+		transition-delay: 0.2s
+		&:before, &:after
+			content: ""
+			position: absolute
+			left: 0
+			width: 30px
+			height: 3px
+			background: #FFF
+			+transition(transform, 0.2s, 0.2s 0s)
+		&:before
+			top: -9px
+		&:after
+			top: 9px
+	&.is-active
+		span
+			background: transparent 
+			-webkit-transition-delay: 0.2s 
+			transition-delay: 0.2s
+			&:before
+				top: 0
+				+rotate(45)
+			&:after
+				top: 0
+				+rotate(-45)
+	+r(710)
+		display: block
+
+.tools-mob
+	display: none
+	position: absolute
+	top: 65px
+	left: 0
+	right: 0
+	padding: 0 30px
+	border: 1px solid #dfdfdf 
+	background: #FFF 
+	z-index: 999	
+	> a
+		display: block
+		padding: 30px 0
+		border-bottom: 1px solid #dfdfdf
+		color: #5e9efc
+		font-size: 22px
+		line-height: 1
+		+museo
+		+r(710)
+			font-size: 17px
+			padding: 20px 0	
+	&.is-active
+		display: block
+		
+.lang-mob
+	display: block
+	padding: 10px
+	width: 100% 
+	text-align: center
+	a
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding: 20px 0
+		margin: 0 auto
+		color: #333
+		font-size: 20px
+		line-height: 1
+		+museo
+		&:first-child
+			border-right: 2px solid #5e9efc			
+
+//FOOTER
+.footer
+	background: #f7f8fb
+	padding: 20px 0 20px
+
+	.cont
+		max-width: 1000px
+		margin: auto 
+
+.footer_market
+	.inner_market
+		padding: 0 20px
+
+	.footer__wrap	
+		float: left
+		width: 25%
+		padding-right: 30px	
+		text-align: center
+		margin: 0
+		+r(900)
+			width: 33.33333%
+			text-align: left 
+			padding-right: 10px
+			&:last-of-type
+				display: none				
+
+		.is-center
+			text-align: left
+			display: inline-block
+
+		.is-left
+			text-align: left	
+
+		h3
+			font-size: 15px
+			color: #333
+			margin-bottom: 25px
+			+museo
+		ul
+
+			li
+				display: block
+				margin-bottom: 10px
+				a
+					color: #5e9efc
+					font-size: 12px
+					+museo
+					&:hover
+						text-decoration: underline
+			+r(500)
+				display: none
+
+	.footer__phone
+		a
+			display: block
+			margin-top: 40px
+			font-size: 20px
+			color: #333
+			+museo
+		p
+			font-size: 12px
+			color: #333
+			+museo
+		
+
+	+r(700)
+		.footer__wrap
+			width: 31%
+			margin-right: 2%
+			&.phone
+				display: none
+	+r(500)
+		.footer__wrap
+			width: auto
+			float: none				
+	+r(380)
+		.footer__wrap
+			display: block
+			width: 100%
+			margin: 0
+			h3
+				margin-bottom: 10px
+			ul
+				display: none			
+
+
+//POPUP
+.popup-wrap
+	+vertical
+	width: 100%
+	min-height: 100%
+	+box
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 99999 
+	display: none
+	overflow: auto
+	&.is-active
+		display: block
+.popup-wrapper
+	+vertical
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	padding: 20px 10px
+	overflow: auto
+	z-index: 100 
+	background: rgba(0, 0, 0, 0.5) 
+	min-width: 300px
+.popup
+	display: inline-block
+	vertical-align: middle
+	width: 100%
+	background: #fff 
+	text-align: left
+	min-width: 300px 
+	max-width: 320px
+	margin: 0 auto 10px 
+	+border-radius(2px)
+	z-index: 150 
+	position: relative
+	display: inline-block
+	&__inner
+		padding: 20px 
+		position: relative
+		text-align: center
+	&__link
+		padding: 12px 20px
+		border-top: 1px solid #efefef  
+		text-align: center
+	h3
+		margin-bottom: 15px
+		+reg
+		font-size: 22px
+		color: #333
+	p
+		+reg
+		font-size: 12px
+		line-height: 1.3
+		margin-bottom: 15px
+		color: #666666
+		strong
+			+bold
+			margin: 0 5px
+	.input
+		margin-bottom: 10px
+	.checkbox
+		float: left
+		width: auto
+		margin: 0 0 10px
+	.p-link
+		font-family: "HelveticaNeue Roman", Helvetica, sans-serif
+		font-size: 12px
+		color: #2196f3
+		display: inline-block
+	.btn
+		clear: both
+		width: 100%
+	&__login
+		.p-link			
+			float: right
+			padding: 3px 0 0
+			margin: 0 0 10px
+	&__close
+		+s(close)
+		position: absolute
+		top: 15px
+		right: 15px				
+
+.popup_enter
+	-webkit-border-radius: 10px
+	border-radius: 10px
+	label
+		text-align: left
+		p
+			margin-bottom: 5px
+		input
+			-webkit-border-radius: 10px
+			border-radius: 10px
+	.popup__enter
+		.p-link
+			float: right
+		.btn
+			-webkit-border-radius: 20px
+			border-radius: 20px
+	.popup__link
+		border: none
+		padding: 12px 20px 0
+		
+.popup_register
+	-webkit-border-radius: 10px
+	border-radius: 10px
+	label
+		display: block
+		text-align: left
+		p
+			margin-bottom: 5px
+		&.checkbox
+			margin-top: 10px
+	.popup__register
+		.btn
+			-webkit-border-radius: 20px
+			border-radius: 20px
+	.popup__link
+		border: none
+		padding: 12px 20px 0
+
+.popup_call
+	-webkit-border-radius: 10px
+	border-radius: 10px
+	+museo
+
+	h3
+		+museo
+	p
+		+museo
+
+	label
+		text-align: left
+		p
+			margin-bottom: 5px
+			+museo
+
+		input
+			-webkit-border-radius: 10px
+			border-radius: 10px
+			+museo
+		
+		input[type="tel"]
+			margin-bottom: 5px
+
+	.alert
+		color: #d45d60
+		+museo
+		font-size: 12px
+		text-align: left
+		font-weight: 500
+		display: block
+		margin-bottom: 12px
+		visibility: hidden
+	
+	.btn
+		border-radius: 20px
+		background-color: #5e9efc
+		margin-bottom: 14px		
