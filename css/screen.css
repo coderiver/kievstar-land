@@ -319,7 +319,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.top { background-color: #239fff; position: relative; overflow: hidden; }
+.top { background-color: #239FFF; position: relative; overflow: hidden; }
 .top__lblock { display: inline-block; width: 55%; padding: 50px 0 55px 20px; }
 @media only screen and (max-width: 1024px) { .top__lblock { padding: 50px 20px 55px 20px; width: auto; } }
 @media only screen and (max-width: 700px) { .top__lblock { padding-top: 30px; } }
@@ -337,14 +337,14 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .top__rblock .price span { color: #5a9cfc; font: 300 20px/1 "MuseoSansCyrl", sans-serif; }
 
 .start { max-width: 1000px; margin: auto; font-size: 0; text-align: center; padding-top: 25px; }
-.start__numb { border-radius: 50%; width: 90px; height: 90px; line-height: 90px; background-color: #5e9efc; color: white; font-family: "HelveticaNeue Medium", Helvetica, sans-serif; font-size: 48px; font-weight: 400; margin: 0 auto 25px; }
+.start__numb { border-radius: 50%; width: 90px; height: 90px; line-height: 90px; background-color: #239FFF; color: white; font-family: "HelveticaNeue Medium", Helvetica, sans-serif; font-size: 48px; font-weight: 400; margin: 0 auto 25px; }
 .start__bl { width: 25%; min-height: 176px; display: inline-block; vertical-align: top; padding-right: 3%; margin-bottom: 75px; }
 @media only screen and (max-width: 900px) { .start__bl { width: 50%; } }
 @media only screen and (max-width: 550px) { .start__bl { margin: 0 auto 40px; display: block; } }
 .start__bl p { color: #333; font: 500 16px/1.2 "MuseoSansCyrl", sans-serif; }
 
 .ad { position: relative; overflow: hidden; font-size: 0; margin-bottom: 80px; }
-.ad__block { width: 49%; min-height: 200px; padding: 45px 50px 20px 20px; background-color: #5a9ffc; border: 2px solid #5a9ffc; vertical-align: top; display: inline-block; margin: 0 2% 20px 0; position: relative; }
+.ad__block { width: 49%; min-height: 200px; padding: 45px 50px 20px 20px; background-color: #239FFF; border: 2px solid #239FFF; vertical-align: top; display: inline-block; margin: 0 2% 20px 0; position: relative; }
 @media only screen and (max-width: 1185px) { .ad__block { padding: 25px; min-height: 335px; } }
 @media only screen and (max-width: 1024px) { .ad__block { width: auto; max-width: 778px; margin: 0 auto 20px; display: block; min-height: 200px; } }
 @media only screen and (max-width: 550px) { .ad__block { min-height: auto; padding: 20px; } }
@@ -413,9 +413,9 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .deploy__in { width: 460px; margin: auto; position: relative; }
 @media only screen and (max-width: 550px) { .deploy__in { width: auto; } }
 .deploy__in:before, .deploy__in:after { content: " "; display: table; clear: both; }
-.deploy__bl { max-width: 778px; border: 1px solid #5e9efc; border-radius: 6px; margin: 0 auto 20px; position: relative; background-color: #FFF; padding: 17px 0 14px; display: block; }
+.deploy__bl { max-width: 778px; border: 1px solid #239FFF; border-radius: 6px; margin: 0 auto 20px; position: relative; background-color: #FFF; padding: 17px 0 14px; display: block; }
 @media only screen and (max-width: 550px) { .deploy__bl { padding-right: 20px; padding-left: 20px; } }
-.deploy__bl.is-active { background-color: #5e9efc; color: #fff; }
+.deploy__bl.is-active { background-color: #239FFF; color: #fff; }
 .deploy__bl.is-active .square { border: 2px solid #fff; }
 .deploy__bl.is-active .deploy__in:before { content: " "; display: block; position: absolute; top: -18px; right: 0; z-index: 10; background: url('../img/icons-sac32510552.png') 0 -629px no-repeat; width: 50px; height: 50px; }
 @media only screen and (max-width: 550px) { .deploy__bl.is-active .deploy__in:before { right: 20px; } }
@@ -428,7 +428,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .deploy__content h3 { color: #333; font-size: 18px; position: relative; padding-bottom: 17px; }
 .deploy__content h3:after { display: block; content: " "; background: url('../img/icons-sac32510552.png') 0 -98px no-repeat; width: 246px; height: 11px; position: absolute; bottom: 0; left: 0; }
 
-.profit { min-height: 295px; background-color: #5e9efc; text-align: center; position: relative; overflow: hidden; padding-top: 32px; margin-bottom: 100px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.profit { min-height: 295px; background-color: #239FFF; text-align: center; position: relative; overflow: hidden; padding-top: 32px; margin-bottom: 100px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
 @media only screen and (max-width: 1024px) { .profit { padding: 32px 40px 0; text-align: left; } }
 @media only screen and (max-width: 631px) { .profit { padding: 30px 20px 20px; } }
 .profit__wrp { text-align: center; }
